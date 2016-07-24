@@ -4,4 +4,10 @@
 // var example = require('./example');
 
 // use require without a reference to ensure a file is bundled
-require('./example');
+
+const authEvents = require('./auth/events.js');
+
+// On document ready add the event handlers to the DOM nodes
+$(() => {
+  authEvents.addHandlers();
+});
