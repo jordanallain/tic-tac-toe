@@ -10,4 +10,7 @@ const authEvents = require('./auth/events.js');
 // On document ready add the event handlers to the DOM nodes
 $(() => {
   authEvents.addHandlers();
+  $('.select-sign-up').on('click', function(){
+    $('.sign-up-modal').modal('show');
+  });
 });
