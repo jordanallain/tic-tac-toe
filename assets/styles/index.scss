@@ -13,56 +13,66 @@ $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 }
 
 .game-board {
-  background-color: #f00;
-  margin: 100px auto 0 400px;
-  display: inline-block;
+  margin: 100px auto;
+  overflow: hidden;
+  height: 296px;
+  width: 296px;
 }
 
-.cell {
-  background-color: #555;
-  height: 150px;
-  float: left;
-  width: 150px;
-}
 
-tileA {
+ .game-tile {
+   height: 96px;
+   width: 96px;
+   float: left;
+ }
+
+
+.tile-A {
   border-right: solid 1px #000;
   border-bottom: solid 1px #000;
 }
 
-tileB {
+.tile-B {
   border-left: solid 1px #000;
   border-bottom: solid 1px #000;
   border-right: solid 1px #000;
 }
 
-tileC {
+.tile-C {
   border-left: solid 1px #000;
   border-bottom: solid 1px #000;
 }
 
-tileD {
-
+.tile-D {
+  border-top: 1px solid #000;
+  border-right: 1px solid #000;
+  border-bottom: 1px solid #000;
 }
 
-tileE {
-
+.tile-E {
+  border: 1px solid #000;
 }
 
-tileF {
-
+.tile-F {
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+  border-left: 1px solid #000;
 }
 
-tileG {
-
+.tile-G {
+  border-top: 1px solid #000;
+  border-right: 1px solid #000;
 }
 
-tileH {
-
+.tile-H {
+  border-top: 1px solid #000;
+  border-right: 1px solid #000;
+  border-left: 1px solid #000;
 }
 
-tileI {
-
+.tile-I {
+  border-top: 1px solid #000;
+  border-left: 1px solid #000;
 }
 
 // nav {
