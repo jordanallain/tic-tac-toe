@@ -5,8 +5,18 @@ $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
   margin-right: 10px;
 }
 
-#sign-up {
-  margin-top: 50px;
+.game-board {
+  margin-top: 50%;
+  width: 75%;
+  background-color: red;
+}
+
+.cell {
+  background-color: #555555;
+  height: 18px;
+  max-height: 20px;
+  min-height: 15px;
+  border: 1px solid black;
 }
 
 // nav {

@@ -13,4 +13,10 @@ $(() => {
   $('.select-sign-up').on('click', function(){
     $('.sign-up-modal').modal('show');
   });
+  $('.select-sign-in').on('click', function(){
+    $('.sign-in-modal').modal('show');
+  });
+  $('.select-change-password').on('click', function(){
+    $('.change-password-modal').modal('show');
+  });
 });
