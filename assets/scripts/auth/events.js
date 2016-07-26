@@ -26,8 +26,19 @@ const onSignIn = function (event) {
 
 //prevents page from refreshing and checks to see if old password is correct. if
 //it is it changes the value to the new password
-const onChangePassword = function (event) {
+const onChangePassword = function onChangePassword(event){
+  let data = getFormFields(this);
   event.preventDefault();
+  api.changePassword(data)
+    .done(ui.success)
+    .fail(ui.failure);
+};
+
+const onSignOut = function onSignOut(event) {
+  event.preventDefault();
+  api.signOut()
+    .done(ui.signOutSuccess)
+    .fail(ui.failure);
 };
 
 //attach listeners to the DOM set all to one variable
@@ -35,6 +46,7 @@ const addHandlers = () => {
   $('#sign-up').on('submit', onSignUp);
   $('#sign-in').on('submit', onSignIn);
   $('#change-password').on('submit', onChangePassword);
+  $('.select-sign-out').on('click', onSignOut);
 };
 
 module.exports = {

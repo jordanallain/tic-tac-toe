@@ -11,7 +11,7 @@ const failure = (error) => {
 };
 
 const signInSuccess = (data) => {
-  $('.user-display').val(data.user.email + ':');
+  //$('.user-display').val(data.user.email + ':'); trying to display user email
   app.user = data.user;
   console.log(app);
 };

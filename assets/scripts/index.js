@@ -25,4 +25,7 @@ $(() => {
   $('.sign-in-btn').on('click', function(){
     $('.sign-in-modal').modal('hide');
   });
+  $('.change-password-btn').on('click', function(){
+    $('.change-password-modal').modal('hide');
+  });
 });
