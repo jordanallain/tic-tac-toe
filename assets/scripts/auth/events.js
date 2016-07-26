@@ -17,11 +17,11 @@ const onSignUp = function (event) {
 //prevents page from refreshing and checks to see if user exists, if they do
 //it logs them in
 const onSignIn = function (event) {
-  // let data = getFormFields(this);
+  let data = getFormFields(this);
   event.preventDefault();
-  // api.signUp(data)
-  //   .done(ui.success)
-  //   .fail(ui.failure);
+  api.signIn(data)
+    .done(ui.signInSuccess)
+    .fail(ui.failure);
 };
 
 //prevents page from refreshing and checks to see if old password is correct. if

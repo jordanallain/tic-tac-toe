@@ -19,4 +19,10 @@ $(() => {
   $('.select-change-password').on('click', function(){
     $('.change-password-modal').modal('show');
   });
+  $('.sign-up-btn').on('click', function(){
+    $('.sign-up-modal').modal('hide');
+  });
+  $('.sign-in-btn').on('click', function(){
+    $('.sign-in-modal').modal('hide');
+  });
 });

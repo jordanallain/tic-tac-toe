@@ -23,21 +23,25 @@
         </div>
       </nav>
       <!-- END NAV BAR -->
-      <div class="game-board container-fluid">
+
+      <div class="user-display">
+        <h1>:</h1>
+      </div>
+      <div class="game-board">
           <div class="row">
-            <div class="cell col-sm-3" id="tileA"></div>
-            <div class="cell col-sm-3" id="tileB"></div>
-            <div class="cell col-sm-3" id="tileC"></div>
+            <div class="cell" id="tileA"></div>
+            <div class="cell" id="tileB"></div>
+            <div class="cell" id="tileC"></div>
           </div>
           <div class="row">
-            <div class="cell col-sm-3" id="tileD"></div>
-            <div class="cell col-sm-3" id="tileE"></div>
-            <div class="cell col-sm-3" id="tileF"></div>
+            <div class="cell" id="tileD"></div>
+            <div class="cell" id="tileE"></div>
+            <div class="cell" id="tileF"></div>
           </div>
           <div class="row">
-            <div class="cell col-sm-3" id="tileG"></div>
-            <div class="cell col-sm-3" id="tileH"></div>
-            <div class="cell col-sm-3" id="tileI"></div>
+            <div class="cell" id="tileG"></div>
+            <div class="cell" id="tileH"></div>
+            <div class="cell" id="tileI"></div>
           </div>
       </div>
 
@@ -53,12 +57,11 @@
               <form id="sign-up">
                 <input name="credentials[email]" type="text" placeholder="Your E-Mail">
                 <input name="credentials[password]" type="password" placeholder="Password">
-                <input name="submit" type="submit" value="Submit">
+                <input name="submit" type="submit" class="sign-up-btn" value="Submit">
               </form>
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-              <button type="button" class="btn btn-primary">Create Log In</button>
             </div>
           </div><!-- /.modal-content -->
         </div><!-- /.modal-dialog -->
@@ -77,12 +80,11 @@
               <form id="sign-in">
                 <input name="credentials[email]" type="text" placeholder="Your E-Mail">
                 <input name="credentials[password]" type="password" placeholder="Password">
-                <input name="submit" type="submit" value="Submit">
+                <input name="submit" type="submit" class="sign-in-btn" value="Submit">
               </form>
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-              <button type="button" class="btn btn-primary">Log In</button>
             </div>
           </div><!-- /.modal-content -->
         </div><!-- /.modal-dialog -->
