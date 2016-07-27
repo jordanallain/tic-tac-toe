@@ -25,6 +25,19 @@ const attachGameLogic = () => {
      if(counter === 0){
        gameBoardArray.push('X');
        $(this).text('X');
+       return counter++;
+     }else if(counter === 1){
+       gameBoardArray.push('O');
+       $(this).text('O');
+       return counter++;
+     }else if(counter % 2 === 0){
+       gameBoardArray.push('X');
+       $(this).text('X');
+       return counter++;
+     }else if(counter % 2 !== 0){
+       gameBoardArray.push('O');
+       $(this).text('O');
+       return counter++;
      }
   });
 };
