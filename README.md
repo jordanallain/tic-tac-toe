@@ -15,3 +15,5 @@ Problems
   the menu button right aligned but it would go off the edge of the screen just
   a bit. I fixed the problem by adding margin to the right of the button.
 - Having more trouble with margin on certain elements. Will put it aside for now.
+- Biggest problem so far is building an array with the X's and O's from the board
+  in the correct index.

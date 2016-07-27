@@ -24,12 +24,12 @@ $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
   float: left;
   height: 96px;
   width: 96px;
- }
 
-.game-tile > h1 {
-  font-size: 60px;
-  text-align: center;
-}
+  h1 {
+    font-size: 60px;
+    text-align: center;
+  }
+ }
 
 .tile-a {
   border-bottom: solid 1px $almost-black;
