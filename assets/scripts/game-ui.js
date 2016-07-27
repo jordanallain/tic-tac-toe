@@ -22,23 +22,18 @@ let counter = 0;
 
 const attachGameLogic = () => {
   $('.game-tile').on('click', function(){
-     if(counter === 0){
-       gameBoardArray.push('X');
-       $(this).text('X');
-       return counter++;
-     }else if(counter === 1){
-       gameBoardArray.push('O');
-       $(this).text('O');
-       return counter++;
-     }else if(counter % 2 === 0){
-       gameBoardArray.push('X');
-       $(this).text('X');
-       return counter++;
-     }else if(counter % 2 !== 0){
-       gameBoardArray.push('O');
-       $(this).text('O');
-       return counter++;
-     }
+
+
+       if(counter % 2 === 0){
+         gameBoardArray.push('X');
+         $(this).text('X');
+         return counter++;
+       }else{
+         gameBoardArray.push('O');
+         $(this).text('O');
+         return counter++;
+       }
+
   });
 };
 
