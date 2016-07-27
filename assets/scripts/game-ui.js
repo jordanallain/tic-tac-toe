@@ -1,21 +1,34 @@
 'use strict';
+let gameBoardArray = [];
+//
+// //
+// // const clickX = functon(){
+// //   this.
+// // }
+// //
+//
+// const onTile = function(){
+//   if(gameBoardArray.length === 0){
+//     $
+//   }
+
+
+// $('.game-tile').on('click', function(){
+//   $(this).innertext('X');
+// });
+
+
+let counter = 0;
 
 const attachGameLogic = () => {
-  //add win checkers
+  $('.game-tile').on('click', function(){
+     if(counter === 0){
+       gameBoardArray.push('X');
+       $(this).text('X');
+     }
+  });
 };
 
-module.exports = attachGameLogic;
-
-// const app = require('../app');
-
-
-
-// const signOut = () => {
-//   return $.ajax({
-//     url: app.api + '/sign-out/' + app.user.id,
-//     method: "DELETE",
-//     headers: {
-//       Authorization: 'Token token=' + app.user.token,
-//     },
-//   });
-// };
+module.exports = {
+  attachGameLogic,
+};
