@@ -41,12 +41,20 @@ const onSignOut = function onSignOut(event) {
     .fail(ui.failure);
 };
 
+const onNewGame = function onNewGame(event){
+  event.preventDefault();
+  api.newGame()
+    .done(ui.success)
+    .fail(ui.failure);
+};
+
 //attach listeners to the DOM set all to one variable
 const addHandlers = () => {
   $('#sign-up').on('submit', onSignUp);
   $('#sign-in').on('submit', onSignIn);
   $('#change-password').on('submit', onChangePassword);
   $('.select-sign-out').on('click', onSignOut);
+  $('.new-game').on('click', onNewGame);
 };
 
 module.exports = {

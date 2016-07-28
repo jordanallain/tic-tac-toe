@@ -108,14 +108,14 @@ $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
   width: 74px;
 }
 
-.reset > p {
-  margin-top: 20px;
-}
-
 .reset {
   clear: both;
   border-top: 2px solid black;
   text-align: center;
   height: 74px;
   width: 148px;
+
+  a {
+    text-decoration: none;
+  }
 }
