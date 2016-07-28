@@ -32,7 +32,7 @@ const changePassword = (data) => {
   });
 };
 
-//ajax request to sign a user out
+//ajax request to sign a user out, deletes their token
 const signOut = () => {
   return $.ajax({
     url: app.api + 'sign-out/' + app.user.id,
@@ -43,6 +43,7 @@ const signOut = () => {
   });
 };
 
+//ajax request to create a new game attached to the current user
 const newGame = () => {
   return $.ajax({
     url: app.api + 'games',
