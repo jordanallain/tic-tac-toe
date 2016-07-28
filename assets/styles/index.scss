@@ -9,6 +9,7 @@ $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 
 .user-display {
   height: 40px;
+  padding-top: 30px;
   margin-top: 60px;
   width: 40px;
 }
@@ -108,7 +109,16 @@ $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
   width: 74px;
 }
 
-.reset {
+.new-game {
+  padding-right: 15px;
+}
+
+// .reset {
+//   padding-left: 25px;
+//   padding-right: 20px;
+// }
+
+.new-reset {
   clear: both;
   border-top: 2px solid black;
   text-align: center;
@@ -117,5 +127,6 @@ $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 
   a {
     text-decoration: none;
+    color: black;
   }
 }

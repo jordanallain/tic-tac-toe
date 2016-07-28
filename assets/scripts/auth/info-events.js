@@ -52,6 +52,13 @@ const onSignOut = function onSignOut(event) {
 const onNewGame = function onNewGame(event){
   event.preventDefault();
   api.newGame()
+    .done(ui.newGameSuccess)
+    .fail(ui.failure);
+};
+
+const onGetGames = function onGetGames(event){
+  event.preventDefault();
+  api.getGames()
     .done(ui.success)
     .fail(ui.failure);
 };
@@ -64,6 +71,7 @@ const addHandlers = () => {
   $('#change-password').on('submit', onChangePassword);
   $('.select-sign-out').on('click', onSignOut);
   $('.new-game').on('click', onNewGame);
+  $('#get-games').on('click', onGetGames);
 };
 
 module.exports = {

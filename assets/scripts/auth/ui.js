@@ -11,7 +11,7 @@ const failure = (error) => {
 };
 
 const signInSuccess = (data) => {
-  //$('.user-display').val(data.user.email + ':'); trying to display user email
+  $('.user-display').text(data.user.email + ':');
   app.user = data.user;
   console.log(app);
 };
@@ -21,9 +21,14 @@ const signOutSuccess = () => {
   console.log(app);
 };
 
+const newGameSuccess = (data) => {
+  console.log(data.games.cells + "huckoo");
+};
+
 module.exports = {
   success,
   failure,
   signInSuccess,
   signOutSuccess,
+  newGameSuccess,
 };
