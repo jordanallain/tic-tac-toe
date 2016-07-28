@@ -29,4 +29,10 @@ $(() => {
   $('.change-password-btn').on('click', function(){
     $('.change-password-modal').modal('hide');
   });
+  $('#get-game').on('click', function(){
+    $('.get-game-id-modal').modal('show');
+  });
+  $('.get-game-id-btn').on('click', function(){
+    $('.get-game-id-modal').modal('hide');
+  });
 });

@@ -20,14 +20,17 @@
             <li><a class="select-change-password">Change Password</a></li>
             <li><a class="select-sign-out">Sign Out</a></li>
             <li><a id="get-games">Get Games</a></li>
+            <li><a id="get-game">Get Game by ID</a></li>
           </ul>
         </div>
       </nav>
       <!-- END NAV BAR -->
 
-      <div class="user-display">
-        <h1>:</h1>
-      </div>
+      <!-- <div> -->
+        <h1 class="user-display">:</h1>
+        <h1 class="total-games"></h1>
+        <!--<p class="total-games">0</p>
+      </div> -->
 
       <!-- GAME BOARD -->
       <div class="game-board">
@@ -121,5 +124,28 @@
         </div><!-- /.modal-dialog -->
       </div><!-- /.modal -->
     <!-- END CHANGE PASSWORD MODAL -->
+
+    <div class="get-game-id-modal modal fade" tabindex="-1" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title">Enter Game ID</h4>
+          </div>
+          <div class="modal-body">
+            <form id="game-by-id">
+              <fieldset>
+                <input type="text" name="game-id" placeholder= "Game ID Number">
+                <input type="submit" name="submit" class= "get-game-id-btn" value="Get Game">
+              </fieldset>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
     </body>
 </html>

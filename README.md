@@ -22,3 +22,6 @@ Problems
   if statement that worked for most instances but wasn't perfect. Broke down the
   function into smaller functions to make it easier to understand. Will break it
   down even further if I have time at the end but it is working.
+- Hours of struggling trying to get the amount of games a user has associated with
+  them to show up on the page. Finally after passing 'data' into my getGamesSuccess
+  I was able to show the amount of games with $('.total-games').text(data.games.length);

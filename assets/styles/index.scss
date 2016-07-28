@@ -13,6 +13,10 @@ $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
   margin-top: 60px;
   width: 40px;
 }
+//
+// .total-games {
+//   float: left;
+// }
 
 .game-board {
   height: 296px;
@@ -30,6 +34,12 @@ $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
     font-size: 60px;
     text-align: center;
   }
+ }
+
+.name-display {
+  display: inline;
+  padding-right: 8px;
+  float: left;
  }
 
 .tile-a {

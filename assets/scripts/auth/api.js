@@ -44,18 +44,31 @@ const signOut = () => {
 };
 
 //ajax request to create a new game attached to the current user
-const newGame = () => {
+const newGame = (data) => {
   return $.ajax({
     url: app.api + 'games',
     method: "POST",
     headers: {
       Authorization: 'Token token=' + app.user.token,
-  }});
+  },
+  data,
+});
 };
 
+//ajax request to get all games user has played
 const getGames = () => {
   return $.ajax({
     url: app.api + 'games',
+    method: "GET",
+    headers: {
+      Authorization: 'Token token=' + app.user.token,
+  }});
+};
+
+//ajax request to get a single game by ID that is associated with the user
+const getGame = (id) => {
+  return $.ajax({
+    url: app.api + 'games/' + id,
     method: "GET",
     headers: {
       Authorization: 'Token token=' + app.user.token,
@@ -69,4 +82,5 @@ module.exports = {
   changePassword,
   newGame,
   getGames,
+  getGame,
 };

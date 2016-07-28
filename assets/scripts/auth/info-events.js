@@ -10,6 +10,7 @@ const ui = require('./ui');
 const onSignUp = function (event) {
   let data = getFormFields(this);
   event.preventDefault();
+  console.log(data);
   api.signUp(data)
     .done(ui.success)
     .fail(ui.failure);
@@ -51,7 +52,8 @@ const onSignOut = function onSignOut(event) {
 //attaches it to the user logged in
 const onNewGame = function onNewGame(event){
   event.preventDefault();
-  api.newGame()
+  let data = {};
+  api.newGame(data)
     .done(ui.newGameSuccess)
     .fail(ui.failure);
 };
@@ -59,7 +61,15 @@ const onNewGame = function onNewGame(event){
 const onGetGames = function onGetGames(event){
   event.preventDefault();
   api.getGames()
-    .done(ui.success)
+    .done(ui.getGamesSuccess)
+    .fail(ui.failure);
+};
+
+const onGetGame = function onGetGame(event){
+  event.preventDefault();
+  let data = getFormFields(this);
+  api.getGame(data)
+    .done(ui.getGameSuccess)
     .fail(ui.failure);
 };
 
@@ -72,6 +82,7 @@ const addHandlers = () => {
   $('.select-sign-out').on('click', onSignOut);
   $('.new-game').on('click', onNewGame);
   $('#get-games').on('click', onGetGames);
+  $('.get-game-id-btn').on('click', onGetGame);
 };
 
 module.exports = {
