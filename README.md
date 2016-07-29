@@ -51,3 +51,6 @@ else for the time being.
 
 My plan of doing a feature branch to work on was mostly successful, however I
 didn't end up creating as many as I thought I would at the start.
+
+Wanted to make my site mobile first but ran out of time, will attempt this in the
+coming days.
