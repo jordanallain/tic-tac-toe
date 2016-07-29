@@ -1,6 +1,6 @@
 'use strict';
 
-//declar variable app with key api that have a value of our server location
+//declare variable app with key api that has a value of our server location
 const app = {
   api: 'http://tic-tac-toe.wdibos.com/',
 };

@@ -82,5 +82,4 @@ module.exports = {
   newGame,
   getGames,
   getGame,
-  // update,
 };

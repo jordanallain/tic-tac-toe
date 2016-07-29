@@ -3,11 +3,18 @@ $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 @import 'colors';
 
 .menu-button {
-  margin-bottom: 28px;
+  font-family: 'Libre Baskerville', serif;
+  height: 44px;
   margin-right: 10px;
+  margin-top: 3px;
+}
+
+.navbar {
+  max-height: 20px;
 }
 
 .user-message {
+  font-family: 'Libre Baskerville', serif;
   text-align: center;
 }
 
@@ -17,10 +24,6 @@ $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
   padding-top: 30px;
   width: 40px;
 }
-//
-// .total-games {
-//   float: left;
-// }
 
 .game-board {
   height: 296px;
@@ -31,6 +34,8 @@ $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 
 .game-tile {
   float: left;
+  font-family: 'Libre Baskerville', serif;
+  font-size: 30px;
   height: 96px;
   width: 96px;
 
@@ -42,8 +47,8 @@ $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 
 .name-display {
   display: inline;
-  padding-right: 8px;
   float: left;
+  padding-right: 8px;
  }
 
 .tile-a {
@@ -101,8 +106,8 @@ $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 }
 
 .big-letter {
+  font-family: 'Libre Baskerville', serif;
   font-size: 60px;
-  // border-bottom: 2px solid $almost-black;
   padding-bottom: 30px;
 }
 
@@ -124,23 +129,22 @@ $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 }
 
 .new-game {
-  padding-right: 15px;
+  color: $almost-black;
+  font-family: 'Libre Baskerville', serif;
+  text-decoration: none;
 }
 
-// .reset {
-//   padding-left: 25px;
-//   padding-right: 20px;
-// }
+.new-game:hover {
+  color: $almost-black;
+  font-size: 15px;
+  text-decoration: none;
+}
 
 .new-reset {
+  border-top: 2px solid $almost-black;
   clear: both;
-  border-top: 2px solid black;
-  text-align: center;
   height: 74px;
+  padding: 30px;
+  text-align: center;
   width: 148px;
-
-  a {
-    text-decoration: none;
-    color: black;
-  }
 }
