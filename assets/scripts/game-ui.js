@@ -82,16 +82,19 @@ const checkWinner = function(){
     $('.user-message').text('X IS VICTORIOUS!');
     $('.game-tile').data('val', '1');
     gameBoardArray = [];
+    counter = 0;
     over = true;
   }else if(oWins('O')){
 
     $('.user-message').text('O EQUALS CHAMPION!');
     $('.game-tile').data('val', '1');
     gameBoardArray = [];
+    counter = 0;
     over = true;
   }else{
     if(counter === 9){
-
+      counter = 0;
+      gameBoardArray = [];
       over = true;
     $('.user-message').text('tie...gross');
   }
