@@ -20,6 +20,7 @@ const signInSuccess = (data) => {
 const signOutSuccess = () => {
   $('.user-display').text('');
   $('.user-message').text('Don\'t leave me');
+
   delete app.user;
   console.log(app);
 };
@@ -30,8 +31,8 @@ const newGameSuccess = (data) => {
 };
 
 const getGameSuccess = (data) => {
-  app.games = data.games;
-  console.log(app + ": for lauren");
+  app.games = data.game;
+  console.log(app.games);
 };
 
 const getGamesSuccess = (data) => {
