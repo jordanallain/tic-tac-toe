@@ -18,7 +18,8 @@ const signInSuccess = (data) => {
 };
 
 const signOutSuccess = () => {
-  $('.user-display').text(':');
+  $('.user-display').text('');
+  $('.user-message').text('Don\'t leave me');
   delete app.user;
   console.log(app);
 };
