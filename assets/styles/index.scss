@@ -7,10 +7,14 @@ $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
   margin-right: 10px;
 }
 
+.user-message {
+  text-align: center;
+}
+
 .user-display {
   height: 40px;
-  padding-top: 30px;
   margin-top: 60px;
+  padding-top: 30px;
   width: 40px;
 }
 //

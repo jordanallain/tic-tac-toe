@@ -1,5 +1,7 @@
 'use strict';
 
+// const update = require('./auth/api');
+
 let gameBoardArray = new Array(9);
 let counter = 0;
 let over = false;
@@ -76,16 +78,23 @@ const oWins = function(){
 //if there are any winning conditions for X or for O
 const checkWinner = function(){
   if(xWins('X')) {
-    console.log('x');
+
+    $('.user-message').text('X IS VICTORIOUS!');
+    $('.game-tile').data('val', '1');
+    gameBoardArray = [];
     over = true;
   }else if(oWins('O')){
-    console.log('o');
+
+    $('.user-message').text('O EQUALS CHAMPION!');
+    $('.game-tile').data('val', '1');
+    gameBoardArray = [];
     over = true;
   }else{
     if(counter === 9){
+
       over = true;
-      console.log('tie');
-    }
+    $('.user-message').text('tie...gross');
+  }
     return null;
   }
 };
@@ -95,21 +104,25 @@ const checkWinner = function(){
 const attachGameLogic = () => {
   let tempIndex;
   $('.game-tile').on('click', function(){
-      $(this).off();
-       if(counter % 2 === 0){
-         $(this).text('X');
-         counter++;
-       }else{
-         $(this).text('O');
-         counter++;
-     }
-     tempIndex = $(this).data('index');
-     gameBoardArray[tempIndex] = $(this).text();
-     console.log(gameBoardArray);
-     checkWinner();
+  if($(this).data('val') === '0'){
+    if(counter % 2 === 0){
+      $(this).text('X');
+      $(this).data('val', '1');
+      counter++;
+    }else{
+      $(this).text('O');
+      $(this).data('val', '1');
+      counter++;
+    }
+  }
+  tempIndex = $(this).data('index');
+  gameBoardArray[tempIndex] = $(this).text();
+  checkWinner();
+
   });
 };
 
 module.exports = {
   attachGameLogic,
+  gameBoardArray,
 };

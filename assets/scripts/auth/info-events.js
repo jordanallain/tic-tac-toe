@@ -52,6 +52,8 @@ const onSignOut = function onSignOut(event) {
 //attaches it to the user logged in
 const onNewGame = function onNewGame(event){
   event.preventDefault();
+  $('.game-tile').text('');
+  $('.game-tile').data('val', '0');
   let data = {};
   api.newGame(data)
     .done(ui.newGameSuccess)
@@ -66,12 +68,12 @@ const onGetGames = function onGetGames(event){
 };
 
 const onGetGame = function onGetGame(event){
-  event.preventDefault();
   let data = getFormFields(this);
+  event.preventDefault();
   api.getGame(data)
     .done(ui.getGameSuccess)
     .fail(ui.failure);
-};
+  };
 
 //attach listeners to the DOM nodes set all to one variable
 //listeners call function associated with the button
@@ -82,7 +84,7 @@ const addHandlers = () => {
   $('.select-sign-out').on('click', onSignOut);
   $('.new-game').on('click', onNewGame);
   $('#get-games').on('click', onGetGames);
-  $('.get-game-id-btn').on('click', onGetGame);
+  $('#game-by-id').on('submit', onGetGame);
 };
 
 module.exports = {

@@ -66,14 +66,13 @@ const getGames = () => {
 };
 
 //ajax request to get a single game by ID that is associated with the user
-const getGame = (id) => {
-  return $.ajax({
-    url: app.api + 'games/' + id,
-    method: "GET",
-    headers: {
-      Authorization: 'Token token=' + app.user.token,
-  }});
-};
+const getGame = (data) => $.ajax({
+  url: app.api + 'games/' + data.game.id,
+  method: 'GET',
+  headers: {
+    Authorization: 'Token token=' + app.user.token,
+  },
+});
 
 module.exports = {
   signUp,
@@ -83,4 +82,5 @@ module.exports = {
   newGame,
   getGames,
   getGame,
+  // update,
 };
