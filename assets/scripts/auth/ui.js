@@ -29,8 +29,8 @@ const newGameSuccess = (data) => {
 };
 
 const getGameSuccess = (data) => {
-  app.game = data.game;
-  console.log(app);
+  app.games = data.games;
+  console.log(app + ": for lauren");
 };
 
 const getGamesSuccess = (data) => {
