@@ -20,7 +20,7 @@ const signInSuccess = (data) => {
 const signOutSuccess = () => {
   $('.user-display').text('');
   $('.user-message').text('Don\'t leave me');
-
+  $('.total-games').text('');
   delete app.user;
   console.log(app);
 };
