@@ -229,6 +229,7 @@ webpackJsonp([0],[
 	//it is it changes the value to the new password
 	var onChangePassword = function onChangePassword(event) {
 	  var data = getFormFields(this);
+	  console.log(data);
 	  event.preventDefault();
 	  api.changePassword(data).done(ui.success).fail(ui.failure);
 	};
@@ -258,6 +259,7 @@ webpackJsonp([0],[
 
 	var onGetGame = function onGetGame(event) {
 	  var data = getFormFields(this);
+	  console.log(data.id);
 	  event.preventDefault();
 	  api.getGame(data).done(ui.getGameSuccess).fail(ui.failure);
 	};
@@ -418,7 +420,7 @@ webpackJsonp([0],[
 	//ajax request to get a single game by ID that is associated with the user
 	var getGame = function getGame(data) {
 	  return $.ajax({
-	    url: app.api + 'games/' + data.game.id,
+	    url: app.api + 'games/' + data.id,
 	    method: 'GET',
 	    headers: {
 	      Authorization: 'Token token=' + app.user.token
@@ -446,7 +448,7 @@ webpackJsonp([0],[
 	//declare variable app with key api that has a value of our server location
 
 	var app = {
-	  api: 'https://tic-tac-toe.wdibos.com/'
+	  api: 'https://aqueous-atoll-85096.herokuapp.com/'
 	};
 
 	//exports the variable containing the server location to be used in other files.
@@ -478,6 +480,7 @@ webpackJsonp([0],[
 	var signOutSuccess = function signOutSuccess() {
 	  $('.user-display').text('');
 	  $('.user-message').text('Don\'t leave me');
+	  $('.total-games').text('');
 	  delete app.user;
 	  console.log(app);
 	};
@@ -488,8 +491,8 @@ webpackJsonp([0],[
 	};
 
 	var getGameSuccess = function getGameSuccess(data) {
-	  app.games = data.games;
-	  console.log(app + ": for lauren");
+	  app.games = data.game;
+	  console.log(app.games);
 	};
 
 	var getGamesSuccess = function getGamesSuccess(data) {
