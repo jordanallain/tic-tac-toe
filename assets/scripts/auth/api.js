@@ -67,7 +67,7 @@ const getGames = () => {
 
 //ajax request to get a single game by ID that is associated with the user
 const getGame = (data) => $.ajax({
-  url: app.api + 'games/' + data.game.id,
+  url: app.api + 'games/' + data.id,
   method: 'GET',
   headers: {
     Authorization: 'Token token=' + app.user.token,
