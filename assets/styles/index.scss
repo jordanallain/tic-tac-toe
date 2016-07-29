@@ -7,11 +7,20 @@ $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
   margin-right: 10px;
 }
 
+.user-message {
+  text-align: center;
+}
+
 .user-display {
   height: 40px;
   margin-top: 60px;
+  padding-top: 30px;
   width: 40px;
 }
+//
+// .total-games {
+//   float: left;
+// }
 
 .game-board {
   height: 296px;
@@ -24,12 +33,18 @@ $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
   float: left;
   height: 96px;
   width: 96px;
+
+  h1 {
+    font-size: 60px;
+    text-align: center;
+  }
  }
 
-.game-tile > h1 {
-  font-size: 60px;
-  text-align: center;
-}
+.name-display {
+  display: inline;
+  padding-right: 8px;
+  float: left;
+ }
 
 .tile-a {
   border-bottom: solid 1px $almost-black;
@@ -108,14 +123,24 @@ $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
   width: 74px;
 }
 
-.reset > p {
-  margin-top: 20px;
+.new-game {
+  padding-right: 15px;
 }
 
-.reset {
+// .reset {
+//   padding-left: 25px;
+//   padding-right: 20px;
+// }
+
+.new-reset {
   clear: both;
   border-top: 2px solid black;
   text-align: center;
   height: 74px;
   width: 148px;
+
+  a {
+    text-decoration: none;
+    color: black;
+  }
 }

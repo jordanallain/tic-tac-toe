@@ -4,11 +4,12 @@
 // var example = require('./example');
 
 // use require without a reference to ensure a file is bundled
-
-const authEvents = require('./auth/events.js');
+const gameEvents = require('./game-ui.js');
+const authEvents = require('./auth/info-events.js');
 
 // On document ready add the event handlers to the DOM nodes
 $(() => {
+  gameEvents.attachGameLogic();
   authEvents.addHandlers();
   $('.select-sign-up').on('click', function(){
     $('.sign-up-modal').modal('show');
@@ -27,5 +28,11 @@ $(() => {
   });
   $('.change-password-btn').on('click', function(){
     $('.change-password-modal').modal('hide');
+  });
+  $('#get-game').on('click', function(){
+    $('.get-game-id-modal').modal('show');
+  });
+  $('.get-game-id-btn').on('click', function(){
+    $('.get-game-id-modal').modal('hide');
   });
 });

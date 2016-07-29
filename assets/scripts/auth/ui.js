@@ -11,14 +11,30 @@ const failure = (error) => {
 };
 
 const signInSuccess = (data) => {
-  //$('.user-display').val(data.user.email + ':'); trying to display user email
+  $('.user-display').text(data.user.email + ':');
+  $('.user-message').text('Click New Game!');
   app.user = data.user;
-  console.log(app);
+  console.log(app.user);
 };
 
 const signOutSuccess = () => {
+  $('.user-display').text(':');
   delete app.user;
   console.log(app);
+};
+
+const newGameSuccess = (data) => {
+  $('.user-message').text(':)');
+  console.log(data);
+};
+
+const getGameSuccess = (data) => {
+  app.games = data.games;
+  console.log(app + ": for lauren");
+};
+
+const getGamesSuccess = (data) => {
+  $('.total-games').text(data.games.length + 'games');
 };
 
 module.exports = {
@@ -26,4 +42,7 @@ module.exports = {
   failure,
   signInSuccess,
   signOutSuccess,
+  newGameSuccess,
+  getGameSuccess,
+  getGamesSuccess,
 };

@@ -32,7 +32,7 @@ const changePassword = (data) => {
   });
 };
 
-//ajax request to sign a user out
+//ajax request to sign a user out, deletes their token
 const signOut = () => {
   return $.ajax({
     url: app.api + 'sign-out/' + app.user.id,
@@ -43,9 +43,44 @@ const signOut = () => {
   });
 };
 
+//ajax request to create a new game attached to the current user
+const newGame = (data) => {
+  return $.ajax({
+    url: app.api + 'games',
+    method: "POST",
+    headers: {
+      Authorization: 'Token token=' + app.user.token,
+  },
+  data,
+});
+};
+
+//ajax request to get all games user has played
+const getGames = () => {
+  return $.ajax({
+    url: app.api + 'games',
+    method: "GET",
+    headers: {
+      Authorization: 'Token token=' + app.user.token,
+  }});
+};
+
+//ajax request to get a single game by ID that is associated with the user
+const getGame = (data) => $.ajax({
+  url: app.api + 'games/' + data.game.id,
+  method: 'GET',
+  headers: {
+    Authorization: 'Token token=' + app.user.token,
+  },
+});
+
 module.exports = {
   signUp,
   signIn,
   signOut,
   changePassword,
+  newGame,
+  getGames,
+  getGame,
+  // update,
 };

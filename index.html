@@ -15,30 +15,36 @@
             Menu
           </button>
           <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenu1">
-            <li><a href="#" class="select-sign-up">Sign Up</a></li>
-            <li><a href="#" class="select-sign-in">Sign In</a></li>
-            <li><a href="#" class="select-change-password">Change Password</a></li>
-            <li><a href="#" class="select-sign-out">Sign Out</a></li>
+            <li><a class="select-sign-up">Sign Up</a></li>
+            <li><a class="select-sign-in">Sign In</a></li>
+            <li><a class="select-change-password">Change Password</a></li>
+            <li><a class="select-sign-out">Sign Out</a></li>
+            <li><a id="get-games">Get Games</a></li>
+            <li><a id="get-game">Get Game by ID</a></li>
           </ul>
         </div>
       </nav>
       <!-- END NAV BAR -->
 
-      <div class="user-display">
-        <h1>:</h1>
-      </div>
+      <!-- <div> -->
+        <h1 class="user-display">:</h1>
+        <h1 class="total-games"></h1>
+        <!--<p class="total-games">0</p>
+      </div> -->
+
+      <h2 class="user-message">Sign In To Play</h2>
 
       <!-- GAME BOARD -->
       <div class="game-board">
-          <div class="game-tile tile-a col-lg-3"><h1></h1></div>
-          <div class="game-tile tile-b col-lg-3"><h1></h1></div>
-          <div class="game-tile tile-c col-lg-3"><h1></h1></div>
-          <div class="game-tile tile-d col-lg-3"><h1></h1></div>
-          <div class="game-tile tile-e col-lg-3"><h1></h1></div>
-          <div class="game-tile tile-f col-lg-3"><h1></h1></div>
-          <div class="game-tile tile-g col-lg-3"><h1></h1></div>
-          <div class="game-tile tile-h col-lg-3"><h1></h1></div>
-          <div class="game-tile tile-i col-lg-3"><h1></h1></div>
+          <div data-index = '0' data-val = '1' class="game-tile tile-a"></div>
+          <div data-index = '1' data-val = '1' class="game-tile tile-b"></div>
+          <div data-index = '2' data-val = '1' class="game-tile tile-c"></div>
+          <div data-index = '3' data-val = '1' class="game-tile tile-d"></div>
+          <div data-index = '4' data-val = '1' class="game-tile tile-e"></div>
+          <div data-index = '5' data-val = '1' class="game-tile tile-f"></div>
+          <div data-index = '6' data-val = '1' class="game-tile tile-g"></div>
+          <div data-index = '7' data-val = '1' class="game-tile tile-h"></div>
+          <div data-index = '8' data-val = '1' class="game-tile tile-i"></div>
       </div>
       <!-- END GAME BOARD -->
 
@@ -46,7 +52,7 @@
       <div class= "x-or-o">
         <div class= "choose-x"><h1 class= "big-letter">X</h1></div>
         <div class= "choose-o"><h1 class= "big-letter">O</h1></div>
-        <div class= "reset"><p>Reset</p></div>
+        <div class= "new-reset"><a class="new-game">New Game</a><!--<a class = "reset">Reset</a>--></div>
       </div>
       <!-- END CHOOSE X OR O AND RESET -->
 
@@ -120,5 +126,28 @@
         </div><!-- /.modal-dialog -->
       </div><!-- /.modal -->
     <!-- END CHANGE PASSWORD MODAL -->
+
+    <div class="get-game-id-modal modal fade" tabindex="-1" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title">Enter Game ID</h4>
+          </div>
+          <div class="modal-body">
+            <form id="game-by-id">
+              <fieldset>
+                <input type="text" name="game-id" class="game-id-form" placeholder= "Game ID Number">
+                <input type="submit" name="submit" class= "get-game-id-btn" value="Get Game">
+              </fieldset>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
     </body>
 </html>
