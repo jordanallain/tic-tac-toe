@@ -10,6 +10,11 @@ const failure = (error) => {
   console.error(error);
 };
 
+// const updateSuccess = (data) => {
+//   app.game = data.game;
+//   console.log(app);
+// };
+
 const signInSuccess = (data) => {
   $('.user-display').text(data.user.email + ':');
   $('.user-message').text('Click New Game!');
@@ -27,7 +32,8 @@ const signOutSuccess = () => {
 
 const newGameSuccess = (data) => {
   $('.user-message').text(':)');
-  console.log(data);
+  app.game = data.game;
+  console.log(app);
 };
 
 const getGameSuccess = (data) => {
