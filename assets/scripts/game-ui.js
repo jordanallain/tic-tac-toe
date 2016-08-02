@@ -1,10 +1,18 @@
 'use strict';
 
-// const update = require('./auth/api');
+const api = require('./auth/api');
+const ui = require('./auth/ui');
 
 let gameBoardArray = new Array(9);
 let counter = 0;
 let over = false;
+
+const patchGame = function(i, v, g){
+  // console.log(api.app.game);
+  api.update(i, v, g)
+    .done(ui.success)
+    .fail(ui.failure);
+};
 
 //function to check if three cells hold a value of X
 const allX = function(cellOne, cellTwo, cellThree) {
@@ -100,6 +108,7 @@ const checkWinner = function(){
   }
     return null;
   }
+  // update.update((counter - 1), $(this).text(), over);
 };
 
 //function that listens for a click on the game board and places alternating X
@@ -121,11 +130,12 @@ const attachGameLogic = () => {
   tempIndex = $(this).data('index');
   gameBoardArray[tempIndex] = $(this).text();
   checkWinner();
-
+  let index = parseInt($(this).data('index'), 10);
+  // console.log(index + $(this).text() + over);
+  patchGame(index, $(this).text().toLowerCase(), over);
   });
 };
 
 module.exports = {
   attachGameLogic,
-  gameBoardArray,
 };

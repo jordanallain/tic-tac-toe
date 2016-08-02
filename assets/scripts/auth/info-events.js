@@ -2,6 +2,7 @@
 
 const getFormFields = require('../../../lib/get-form-fields');
 
+const arr = require('../game-ui.js');
 const api = require('./api');
 const ui = require('./ui');
 
@@ -71,6 +72,7 @@ const onGetGames = function onGetGames(event){
 const onGetGame = function onGetGame(event){
   let data = getFormFields(this);
   console.log(data.id);
+  arr.gameBoardArray = data.cells;
   event.preventDefault();
   api.getGame(data)
     .done(ui.getGameSuccess)

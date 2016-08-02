@@ -59,7 +59,7 @@ const newGame = (data) => {
 const getGames = () => {
   return $.ajax({
     url: app.api + 'games',
-    method: "GET",
+    method: 'GET',
     headers: {
       Authorization: 'Token token=' + app.user.token,
   }});
@@ -74,6 +74,23 @@ const getGame = (data) => $.ajax({
   },
 });
 
+const update = (i, v, g) => $.ajax({
+  url: app.api + 'games/' + app.game.id,
+  method: 'PATCH',
+  headers: {
+    Authorization: 'Token token=' + app.user.token,
+  },
+  data: {
+   "game": {
+     "cell": {
+       "index": i,
+       "value": v
+     },
+     "over": g
+   }
+  }
+});
+
 module.exports = {
   signUp,
   signIn,
@@ -82,4 +99,5 @@ module.exports = {
   newGame,
   getGames,
   getGame,
+  update
 };
