@@ -38,12 +38,12 @@ a {
 }
 
 .game-tile {
+  cursor: default;
   float: left;
   font-family: 'Libre Baskerville', serif;
   font-size: 30px;
   height: 96px;
   width: 96px;
-  cursor: default;
 
   h1 {
     font-size: 60px;
